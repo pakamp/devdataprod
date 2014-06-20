@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Showing Datasets</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Showing Datasets">
+  <meta name="author" content="P.K.">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Showing Datasets</h1>
+    <h2>Presentation of Shiny App for Developing Data Products Coursera Class</h2>
+    <p>P.K.<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h3>Showing Datasets Shiny App</h3>
+  </hgroup>
+  <article data-timings="">
+    <h4>This Shiny App enables user to quickly take a look at one of the R datasets:</h4>
+
+<ul>
+<li>faithful - dataset containing waiting time between eruptions and the duration of the eruption for the Old Faithful geyser in Yellowstone National Park, Wyoming, USA.</li>
+<li>trees - this data set provides measurements of the girth, height and volume of timber in 31 felled black cherry trees. Note that girth is the diameter of the tree (in inches) measured at 4 ft 6 in above the ground.</li>
+<li>iris - famous (Fisher&#39;s or Anderson&#39;s) iris data set gives the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris. The species are Iris setosa, versicolor, and virginica.</li>
+</ul>
+
+<h4>The App has the following functionality/options:</h4>
+
+<ol>
+<li>Enables user to change Caption</li>
+<li>Choose one of three datasets. The summary and pair plot for a chosen dataset is displayed.</li>
+<li>Choose number of observations from a chosen dataset to be displayed in a table</li>
+</ol>
+
+<p>All the results are being automaticly updated, once user changes his choice of options.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h3>Slide 3</h3>
+  </hgroup>
+  <article data-timings="">
+    <h4>The summary of a given dataset is poduced by R command summary()</h4>
+
+<p>Below an example for the trees dataset</p>
+
+<pre><code class="r">summary(trees)
+</code></pre>
+
+<pre><code>##      Girth          Height       Volume    
+##  Min.   : 8.3   Min.   :63   Min.   :10.2  
+##  1st Qu.:11.1   1st Qu.:72   1st Qu.:19.4  
+##  Median :12.9   Median :76   Median :24.2  
+##  Mean   :13.2   Mean   :76   Mean   :30.2  
+##  3rd Qu.:15.2   3rd Qu.:80   3rd Qu.:37.3  
+##  Max.   :20.6   Max.   :87   Max.   :77.0
+</code></pre>
+
+<p>Please note, that the summary is fot the whole dataset, so changing value for number of observation to be displayed in the Table, does not change result of the summary.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h5>The pairs plot - is a plot that shows ALL the possible 2D scatterplots for the chosen dataset - example:</h5>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">pairs(trees)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-2.png" alt="plot of chunk unnamed-chunk-2"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h3>Slide 5</h3>
+  </hgroup>
+  <article data-timings="">
+    <h3>The table is created using head() command</h3>
+
+<p>Example: Choosing dataset trees and Number of observations = 5 will produce</p>
+
+<pre><code class="r">head(trees,5)
+</code></pre>
+
+<pre><code>##   Girth Height Volume
+## 1   8.3     70   10.3
+## 2   8.6     65   10.3
+## 3   8.8     63   10.2
+## 4  10.5     72   16.4
+## 5  10.7     81   18.8
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Showing Datasets Shiny App'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Slide 3'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='The pairs plot - is a plot that shows ALL the possible 2D scatterplots for the chosen dataset - example:'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Slide 5'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
